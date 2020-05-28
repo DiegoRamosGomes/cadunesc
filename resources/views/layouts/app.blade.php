@@ -8,80 +8,47 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-
-    <title>Centro Academico Direito Unesc</title>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
+            margin: 10px 0 0;
+            padding: 0;
+        }
+        .fit-image{
+            width: 100%;
+            object-fit: cover;
         }
 
-        #navbar {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
+        .btn-warning {
+            font-weight: bold;
         }
-
-        #navbar a:visited, a:link, a:hover, a:active {
-            color: black;
-        }
-
-        #navbar .center * {
-            margin: 0;
-            text-align: center;
-        }
-
-        #navbar .social_networks {
-            display: flex;
-            flex-wrap: nowrap;
-            border-radius: 10px;
-        }
-
-        #navbar .social_networks div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 30px;
-            height: 30px;
-            margin: 3px;
-            background-color: #FED605;
-            border-radius: 5px;
-        }
-
-        #navbar .logo {
-            width: 120px;
-            height: 120px;
-        }
-
-        nav hr {
-            background-color: red;
-        }
-
-        @media only screen and (max-width: 768px) {
-            #navbar {
-                display: block;
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.7rem;
+                margin: 2px 5px;
             }
-
-            #navbar div {
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: center;
-            }
-            #navbar .center {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 5px 5px;
+            h3 {
+                font-size: 1rem;
             }
         }
     </style>
 
+    <link rel="stylesheet" href="{{ asset('style\navbar-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('style\subnavbar-style.css') }}">
+
+    <title>Centro Academico Direito Unesc</title>
     @yield('style')
 </head>
 <body>
 <x-navbar></x-navbar>
 @yield('content')
 
-@yield('scripts')
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+@stack('scripts')
 </body>
 </html>

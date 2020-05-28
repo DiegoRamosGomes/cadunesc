@@ -1,0 +1,24 @@
+.social_networks {
+    border-radius: 10px;
+}
+
+.navbar-socialmedia-link {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    background-color: #FED605;
+    border-radius: 5px;
+}
+
+img.logo {
+    width: 100px;
+    height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
