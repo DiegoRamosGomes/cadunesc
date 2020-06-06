@@ -15,8 +15,9 @@
             font-family: 'Montserrat', sans-serif;
             margin: 10px 0 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .fit-image{
+        .fit-image {
             width: 100%;
             object-fit: cover;
         }
@@ -31,6 +32,7 @@
             }
             h3 {
                 font-size: 1rem;
+                font-weight: bold;
             }
         }
     </style>
