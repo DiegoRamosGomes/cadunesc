@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Event;
+use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        for ($i = 1; $i <= 15; $i++) {
+            Event::create([
+                'name' => "Evento $i",
+                'description' => Str::random(50),
+                'start_at' => Carbon::now()->startOfDay(),
+                'end_at' => Carbon::now()->endOfDay()
+            ]);
+        }
     }
 }

@@ -1,31 +1,10 @@
 <div class="d-flex justify-content-center">
     <div class="grid-container">
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
-        <div class="grid-item fit-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU" alt="Evento">
-        </div>
+        @foreach ($events as $event)
+            <div class="grid-item">
+                <img src="{{ $event->image }}" alt="Evento">
+                <p class="font-weight-bold">{{ $event->name }}</p>
+            </div>
+        @endforeach
     </div>
 </div>

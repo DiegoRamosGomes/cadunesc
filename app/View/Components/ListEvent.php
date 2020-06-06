@@ -2,10 +2,13 @@
 
 namespace App\View\Components;
 
+use App\Models\Event;
 use Illuminate\View\Component;
 
 class ListEvent extends Component
 {
+    public $events = [];
+
     /**
      * Create a new component instance.
      *
@@ -13,7 +16,7 @@ class ListEvent extends Component
      */
     public function __construct()
     {
-        //
+        $this->events = Event::limit(9)->get();
     }
 
     /**

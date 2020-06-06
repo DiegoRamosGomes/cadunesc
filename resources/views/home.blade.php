@@ -15,13 +15,16 @@
 
         .grid-item {
             width: 80%;
-            height: 200px;
-            margin: 0 0 10px;
+            height: 150px;
+        }
+
+        .grid-item p {
+            margin: 0;
         }
 
         .grid-item img {
             width: 100%;
-            height: 100%;
+            height: 80%;
         }
 
         @media only screen and (max-width: 600px) {
@@ -31,8 +34,12 @@
             }
             .grid-item {
                 width: 100%;
-                height: 150px;
+                height: 170px;
                 margin: 0 0 10px;
+            }
+            .grid-item img {
+                width: 100%;
+                height: 65%;
             }
             .grid-item:nth-child(n+6) {
                 display:none;
