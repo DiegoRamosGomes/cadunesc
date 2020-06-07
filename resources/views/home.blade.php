@@ -32,17 +32,20 @@
                 display: block;
                 width: 90%;
             }
+
             .grid-item {
                 width: 100%;
                 height: 170px;
                 margin: 0 0 10px;
             }
+
             .grid-item img {
                 width: 100%;
                 height: 65%;
             }
+
             .grid-item:nth-child(n+6) {
-                display:none;
+                display: none;
             }
         }
     </style>
@@ -50,8 +53,26 @@
 
 @section('content')
     <x-home-slider></x-home-slider>
-    <div class="text-center mt-4">
-        <h3>Ultimos eventos</h3>
-        <x-list-event></x-list-event>
-    </div>
+    <x-list-event></x-list-event>
+    <x-home-map></x-home-map>
+    <x-footer></x-footer>
 @endsection
+
+@push('scripts')
+    <script>
+        let map;
+        let marker;
+
+        function initMap() {
+            const latlong = {lat: -28.7016362, lng: -49.4083808};
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: latlong,
+                zoom: 15
+            });
+
+            marker = new google.maps.Marker({position: latlong, map: map});
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ config('app.google_maps_api_key') }}&callback=initMap"
+            async defer></script>
+@endpush
