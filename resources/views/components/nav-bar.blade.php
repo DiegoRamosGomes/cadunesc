@@ -1,4 +1,4 @@
-<nav>
+<nav id="navbar-desktop">
     <div class="d-flex justify-content-around align-items-center flex-wrap">
         <div>
             <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">
@@ -27,4 +27,12 @@
         <div class="sub-navbar-menu"><a href="#">Ajuda</a></div>
     </div>
     <hr>
+</nav>
+<nav id="navbar-mobile" class="fixed-bottom">
+    <div class="row align-items-center p-3" style="background-color: #FED605;">
+        <div class="col text-center font-weight-bold">Inicio</div>
+        <div class="col text-center font-weight-bold">Alunos</div>
+        <div class="col text-center font-weight-bold">Eventos</div>
+        <div class="col text-center font-weight-bold">Ajuda</div>
+    </div>
 </nav>

@@ -2,6 +2,10 @@
 
 @section('style')
     <style>
+        #navbar-mobile {
+            display: none;
+        }
+
         .grid-container {
             display: grid;
             grid-column-gap: 0;
@@ -44,7 +48,7 @@
                 height: 90%;
             }
 
-            .grid-item:nth-child(n+6) {
+            .grid-item:nth-child(n+6), #footer-menus {
                 display: none;
             }
 
@@ -58,6 +62,10 @@
 
             #map {
                 margin-bottom: 30px;
+            }
+
+            #navbar-mobile {
+                display: block;
             }
         }
     </style>
