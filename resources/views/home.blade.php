@@ -35,17 +35,29 @@
 
             .grid-item {
                 width: 100%;
-                height: 170px;
+                height: 230px;
                 margin: 0 0 10px;
             }
 
             .grid-item img {
                 width: 100%;
-                height: 65%;
+                height: 90%;
             }
 
             .grid-item:nth-child(n+6) {
                 display: none;
+            }
+
+            .footer div > div {
+                margin-bottom: 30px;
+            }
+
+            .footer div {
+                width: 100% !important;
+            }
+
+            #map {
+                margin-bottom: 30px;
             }
         }
     </style>
@@ -53,7 +65,9 @@
 
 @section('content')
     <x-home-slider></x-home-slider>
+    <hr>
     <x-list-event></x-list-event>
+    <hr>
     <x-home-map></x-home-map>
     <x-footer></x-footer>
 @endsection

@@ -16,6 +16,7 @@
             margin: 10px 0 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #fCfCfC;
         }
         .fit-image {
             width: 100%;
