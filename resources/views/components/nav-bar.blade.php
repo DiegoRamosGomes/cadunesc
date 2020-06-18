@@ -1,20 +1,21 @@
 <nav id="navbar-desktop">
     <div class="d-flex justify-content-around align-items-center flex-wrap">
         <div>
-            <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">
+{{--            <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">--}}
+            <img class="logo" src="https://via.placeholder.com/150" alt="Logo">
         </div>
         <div class="text-center">
-            <h1 class="font-weight-bold">CA Benedito Narciso da Rocha</h1>
-            <h3 class="font-weight-bold">Centro Academico de Direito</h3>
+            <h1 class="font-weight-bold">Nome Oficial Do Centro Academico</h1>
+            <h3 class="font-weight-bold">Centro Academico de Curso</h3>
         </div>
         <div class="d-flex justify-content-around align-items-center social_networks">
-                <a target="_blank" href="https://www.facebook.com/cadunesc/" class="navbar-socialmedia-link">
+                <a target="_blank" href="https://www.facebook.com/" class="navbar-socialmedia-link">
                     <i class="fa fa-facebook-f"></i>
                 </a>
-                <a target="_blank" href="https://www.instagram.com/cadunesc/" class="navbar-socialmedia-link">
+                <a target="_blank" href="https://www.instagram.com/" class="navbar-socialmedia-link">
                     <i class="fa fa-instagram"></i>
                 </a>
-                <a target="_blank" href="https://twitter.com/unescad" class="navbar-socialmedia-link">
+                <a target="_blank" href="https://twitter.com" class="navbar-socialmedia-link">
                     <i class="fa fa-twitter"></i>
                 </a>
         </div>
