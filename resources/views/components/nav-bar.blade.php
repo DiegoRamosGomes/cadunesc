@@ -4,9 +4,9 @@
 {{--            <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">--}}
             <img class="logo" src="https://via.placeholder.com/150" alt="Logo">
         </div>
-        <div class="text-center">
-            <h1 class="font-weight-bold">Nome Oficial Do Centro Academico</h1>
-            <h3 class="font-weight-bold">Centro Academico de Curso</h3>
+        <div class="text-center mx-5">
+            <h3 class="font-weight-bold">Nome Oficial Do Centro Academico</h3>
+            <h5 class="font-weight-bold">Centro Academico de Curso</h5>
         </div>
         <div class="d-flex justify-content-around align-items-center social_networks">
                 <a target="_blank" href="https://www.facebook.com/" class="navbar-socialmedia-link">
@@ -27,7 +27,7 @@
         <div class="sub-navbar-menu"><a href="#">Eventos</a></div>
         <div class="sub-navbar-menu"><a href="#">Ajuda</a></div>
     </div>
-    <hr>
+    <hr class="mb-0">
 </nav>
 <nav id="navbar-mobile" class="fixed-bottom">
     <div class="row align-items-center p-3" style="background-color: #FED605;">

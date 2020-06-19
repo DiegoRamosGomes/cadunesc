@@ -27,12 +27,16 @@
             font-weight: bold;
         }
         @media only screen and (max-width: 600px) {
-            h1 {
-                font-size: 1.7rem;
+            .logo {
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 1.3rem;
                 margin: 2px 5px;
             }
-            h3 {
-                font-size: 1rem;
+            h5 {
+                font-size: 0.8rem;
                 font-weight: bold;
             }
         }

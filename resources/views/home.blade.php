@@ -40,7 +40,7 @@
             .grid-item {
                 width: 100%;
                 height: 230px;
-                margin: 0 0 10px;
+                margin: 0 0 30px;
             }
 
             .grid-item img {
@@ -73,9 +73,9 @@
 
 @section('content')
     <x-home-slider></x-home-slider>
-    <hr>
+    <hr class="m-0">
     <x-list-event></x-list-event>
-    <hr>
+    <hr style="margin: 50px 0">
     <x-home-map></x-home-map>
     <x-footer></x-footer>
 @endsection

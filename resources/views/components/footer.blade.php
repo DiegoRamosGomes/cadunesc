@@ -2,7 +2,7 @@
     <div class="w-50 d-flex flex-wrap justify-content-center my-3 mt-lg-5 mb-lg-5 text-center">
 {{--        <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">--}}
         <img class="logo" src="https://via.placeholder.com/150" alt="Logo">
-        <div class="m-3">
+        <div class="m-3 text-left">
             <p class="m-0">Nome Oficial Do Centro Academico</p>
             <p class="m-0">Centro Academico de Curso</p>
         </div>
