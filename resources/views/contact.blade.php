@@ -24,7 +24,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut distinctio eum in odio, quaerat sapiente vitae.
             Aliquam deleniti, error, esse fuga, illum iure laborum nulla quis repudiandae similique vero voluptatem?</p>
         <h1 class="my-5 text-center font-weight-bold">Fale Conosco</h1>
-        <form action="{{ route('contact') }}" method="post">
+        <form action="{{ route('contact.store') }}" method="post">
             @csrf
             <div class="row">
                 <div class="col-md-6 col-sm-12">
