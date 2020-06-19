@@ -2,10 +2,6 @@
 
 @section('style')
     <style>
-        #navbar-mobile {
-            display: none;
-        }
-
         .grid-container {
             display: grid;
             grid-column-gap: 0;
@@ -48,24 +44,12 @@
                 height: 90%;
             }
 
-            .grid-item:nth-child(n+6), #footer-menus {
+            .grid-item:nth-child(n+6) {
                 display: none;
-            }
-
-            .footer div > div {
-                margin-bottom: 30px;
-            }
-
-            .footer div {
-                width: 100% !important;
             }
 
             #map {
                 margin-bottom: 30px;
-            }
-
-            #navbar-mobile {
-                display: block;
             }
         }
     </style>
@@ -77,7 +61,6 @@
     <x-list-event></x-list-event>
     <hr style="margin: 50px 0">
     <x-home-map></x-home-map>
-    <x-footer></x-footer>
 @endsection
 
 @push('scripts')
