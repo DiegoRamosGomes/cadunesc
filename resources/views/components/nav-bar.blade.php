@@ -39,9 +39,17 @@
 </nav>
 <nav id="navbar-mobile" class="fixed-bottom">
     <div class="row align-items-center p-3" style="background-color: #FED605;">
-        <div class="col text-center font-weight-bold">Inicio</div>
-        <div class="col text-center font-weight-bold">Alunos</div>
-        <div class="col text-center font-weight-bold">Eventos</div>
-        <div class="col text-center font-weight-bold">Contato</div>
+        <div class="col text-center font-weight-bold">
+            <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}}">Inicio</a>
+        </div>
+        <div class="col text-center font-weight-bold">
+            <a href="#" class="{{ isRoute('students') ? 'active' : ''}}">Alunos</a>
+        </div>
+        <div class="col text-center font-weight-bold">
+            <a href="#" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>
+        </div>
+        <div class="col text-center font-weight-bold">
+            <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}}">Contato</a>
+        </div>
     </div>
 </nav>
