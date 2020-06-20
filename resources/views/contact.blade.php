@@ -26,18 +26,24 @@
         <h1 class="my-5 text-center font-weight-bold">Fale Conosco</h1>
         <form action="{{ route('contact.store') }}" method="post">
             @csrf
+            <div class="toggleEmail">
+                <label>
+                    <input type="checkbox">
+                    Enviar mensagem anonima
+                </label>
+            </div>
             <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <div class="form-group">
-                        <label for="subject">Assunto</label>
-                        <input type="text" id="subject" name="subject" class="form-control" required maxlength="30">
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 email" style="transition: width 2s;">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" class="form-control">
                         <p class="m-0 small text-danger">Para enviar uma mensagem aninima não informe o email</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 subject" style="transition: width 2s;">
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required maxlength="30">
                     </div>
                 </div>
             </div>
@@ -51,3 +57,17 @@
         </form>
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $('.toggleEmail').on('change', () => {
+            if ($('.toggleEmail input').is(':checked')) {
+                $('.subject').removeClass('col-md-6');
+                $('.email').hide();
+            } else {
+                $('.subject').addClass('col-md-6');
+                $('.email').show();
+            }
+        });
+    </script>
+@endpush
