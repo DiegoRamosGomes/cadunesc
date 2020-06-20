@@ -30,7 +30,16 @@
         .btn-warning {
             font-weight: bold;
         }
+
+        .name-project {
+            text-align: left !important;
+        }
+
         @media only screen and (max-width: 600px) {
+            .name-project {
+                text-align: center !important;
+            }
+
             .logo {
                 margin-bottom: 20px;
             }

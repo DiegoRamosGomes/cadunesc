@@ -37,7 +37,6 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" class="form-control">
-                        <p class="m-0 small text-danger">Para enviar uma mensagem aninima não informe o email</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 subject" style="transition: width 2s;">
