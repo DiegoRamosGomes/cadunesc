@@ -10,22 +10,23 @@
     <div class="w-50 d-flex flex-wrap justify-content-center align-items-center">
         <div class="w-50 text-center">
             <p class="font-weight-bold">Contato</p>
-            <p class="small m-1">(48) 9 9141-7009</p>
-            <p class="small m-1">(99) 9999-9999</p>
-            <p class="small m-1">diegoramosgomes5@gmail.com</p>
+            @foreach (config('app.phones') as $phone)
+                <p class="small m-1">{{ $phone }}</p>
+            @endforeach
+            <p class="small m-1"><a class="text-white" href="mailto://{{ config('app.mail') }}">{{ config('app.mail') }}</a></p>
         </div>
         <div class="w-25 text-center" id="footer-menus">
             <p class="font-weight-bold">Menus</p>
-            <p class="small m-1">Inicio</p>
-            <p class="small m-1">Alunos</p>
-            <p class="small m-1">Eventos</p>
-            <p class="small m-1">Ajuda</p>
+            <p class="small m-1"><a class="text-white" href="{{ route('home') }}">Inicio</a></p>
+            <p class="small m-1"><a class="text-white" href="#">Alunos</a></p>
+            <p class="small m-1"><a class="text-white" href="{{ route('events') }}">Eventos</a></p>
+            <p class="small m-1"><a class="text-white" href="{{ route('contact') }}">Contato</a></p>
         </div>
         <div class="w-25 text-center">
             <p class="font-weight-bold">Medias Sociais</p>
-            <p class="small m-1">Instagram</p>
-            <p class="small m-1">Facebook</p>
-            <p class="small m-1">Twitter</p>
+            <p class="small m-1"><a class="text-white" href="{{ config('app.social_network_url.facebook') }}">Facebook</a></p>
+            <p class="small m-1"><a class="text-white" href="{{ config('app.social_network_url.instagram') }}">Instagram</a></p>
+            <p class="small m-1"><a class="text-white" href="{{ config('app.social_network_url.twitter') }}">Twitter</a></p>
         </div>
     </div>
 </div>

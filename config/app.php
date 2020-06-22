@@ -3,6 +3,16 @@
 return [
 
     'google_maps_api_key' => env('GOOGLE_MAPS_API_KEY'),
+    'social_network_url' => [
+        'instagram' => 'https://instagram.com',
+        'facebook' => 'https://facebook.com',
+        'twitter' => 'https://twitter.com'
+    ],
+    'phones' => [
+        '(48) 9 0000-0000',
+        '(48) 3333-3333'
+    ],
+    'mail' => env('MAIL'),
 
     /*
     |--------------------------------------------------------------------------
