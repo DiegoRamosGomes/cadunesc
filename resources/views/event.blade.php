@@ -11,11 +11,15 @@
             <h4 class="text-center">Eventos de Junho</h4>
             <h3 class="text-yellow text-center">22</h3>
             <hr>
-            @forelse ($events as $event)
-                <div> Tem eventos</div>
-            @empty
-                <p>No users</p>
-            @endforelse
+            @foreach ($events as $event)
+                <div class="d-flex my-3">
+                    <img src="{{ $event->image }}" alt="{{ $event->name }}" style="width: 100px;" width="">
+                    <div class="ml-3 justify-content-around">
+                        <p class="">{{ $event->name }}</p>
+                        <p class="small m-0">{{ \Illuminate\Support\Str::limit($event->description, 150) }}</p>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection
@@ -24,7 +28,6 @@
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.0.0/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.0.0/locales-all.min.js"></script>
     <script>
-
         document.addEventListener('DOMContentLoaded', function() {
             let calendarEl = document.getElementById('calendar');
             let calendar = new FullCalendar.Calendar(calendarEl, {
