@@ -6,7 +6,7 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ workflow ]
+    branches: [ development ]
     
 jobs:
   build:
