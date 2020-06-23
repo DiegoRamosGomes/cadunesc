@@ -35,6 +35,14 @@
             text-align: left !important;
         }
 
+        .text-yellow {
+            color: #FED605;
+        }
+
+        .bg-yellow {
+            background-color: #FED605;
+        }
+
         @media only screen and (max-width: 600px) {
             .name-project {
                 text-align: center !important;

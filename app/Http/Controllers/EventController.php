@@ -8,6 +8,9 @@ class EventController extends Controller
 {
     public function index()
     {
-        return view('event');
+        $events = [];
+        return view('event')->with([
+            'events' => $events
+        ]);
     }
 }
