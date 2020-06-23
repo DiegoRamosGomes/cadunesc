@@ -6,7 +6,7 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ development ]
+    branches: [ master ]
     
 jobs:
   build:
@@ -20,5 +20,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          whoami
-          ls -all
+          cd projects/cadunesc
+          git pull origin master
