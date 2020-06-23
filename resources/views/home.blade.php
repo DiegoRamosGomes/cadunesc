@@ -15,7 +15,7 @@
 
         .grid-item {
             width: 80%;
-            height: 150px;
+            height: 200px;
         }
 
         .grid-item p {
