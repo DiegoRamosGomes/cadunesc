@@ -1,8 +1,8 @@
 <nav id="navbar-desktop">
     <div class="d-flex justify-content-around align-items-center flex-wrap">
         <div>
-            {{--            <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">--}}
-            <img class="logo" src="https://via.placeholder.com/150" alt="Logo">
+            <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">
+            {{--            <img class="logo" src="https://via.placeholder.com/150" alt="Logo">--}}
         </div>
         <div class="text-center mx-5">
             <h3 class="font-weight-bold">Nome Oficial Do Centro Academico</h3>
