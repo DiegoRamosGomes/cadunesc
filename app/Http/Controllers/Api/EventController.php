@@ -1,9 +1,10 @@
 <?php
 
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 
+use App\Http\Controllers\Controller;
 use App\Models\Event;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,8 @@ class EventController extends Controller
         ]);
     }
 
-    public function show(Request $request, Event $event)
+    public function show(Request $request)
     {
-        dd($request->all(), $event);
+        return Event::whereDate('start_at', $request->date)->get();
     }
 }

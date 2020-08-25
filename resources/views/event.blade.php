@@ -83,8 +83,9 @@
                                     <hr>
                                 `);
                                 data.forEach((event) => {
+                                    let eventUrl = '{{ route('events.show', '') }}';
                                     $('.event-list').append(`
-                                        <a href="#${event.id}" class="text-dark">
+                                        <a href="${eventUrl}/${ event.id }" class="text-dark">
                                             <div class="d-flex m-3">
                                                 <img src="${event.image}" alt="${event.name}" class="event-logo">
                                                 <div class="ml-3 justify-content-around event-description">

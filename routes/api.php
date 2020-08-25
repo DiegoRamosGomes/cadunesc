@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/events', 'EventController@show')->name('api.events.show');
+Route::get('/events', 'Api\EventController@show')->name('api.events.show');
