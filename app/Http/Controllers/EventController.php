@@ -11,14 +11,18 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::limit(4)->get();
+        $events = Event::whereDate('start_at', '>', now()->firstOfMonth())
+            ->whereDate('start_at', '<', now()->lastOfMonth())
+            ->get();
         return view('event')->with([
             'events' => $events
         ]);
     }
 
-    public function show(Request $request, Event $event)
+    public function show(Event $event)
     {
-        dd($request->all(), $event);
+        return view('events.show')->with([
+            'event' => $event
+        ]);
     }
 }
