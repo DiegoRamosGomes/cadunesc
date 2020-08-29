@@ -19,3 +19,4 @@ Route::get('/contact', 'ContactController@index')->name('contact');
 Route::post('/contact', 'ContactController@store')->name('contact.store');
 
 Route::get('/events', 'EventController@index')->name('events');
+Route::get('/events/{event}', 'EventController@show')->name('events.show');

@@ -14,4 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/events', 'EventController@show')->name('api.events.show');
+Route::get('/events', 'Api\EventController@index')->name('api.events.index');
+Route::post('/events', 'Api\EventController@store');
+
+Route::get('/events/showByDay', 'Api\EventController@showByDay')->name('api.events.showByDay');
+Route::get('/events/{event}', 'Api\EventContr' .
+    'oller@show');

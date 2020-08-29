@@ -5,11 +5,11 @@
 
     <style>
         #calendar {
-            width: 25%;
+            width: 50%;
         }
 
         .event-list {
-            width: 50%;
+            width: 40%;
         }
 
         .event-logo {
@@ -29,6 +29,10 @@
 
         .fc-toolbar-title {
             font-weight: bold;
+        }
+
+        .fc-event-main {
+            cursor: pointer;
         }
 
         @media only screen and (max-width: 600px) {
@@ -53,7 +57,7 @@
 
 @section('content')
     <div class="d-flex flex-wrap justify-content-around my-5">
-        <div id='calendar' class="mx-2"></div>
+        <div id='calendar'></div>
         <div class="event-list"></div>
     </div>
 @endsection
@@ -65,26 +69,44 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             let calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
+            let calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 height: 'auto',
                 locale: 'pt',
+                events: [
+                        @foreach($events as $event)
+                    {
+                        id: '{{ $event->id }}',
+                        title: '{{ $event->name }}',
+                        start: '{{ $event->start_at }}',
+                        end: '{{ $event->end_at }}',
+                        allDay: true,
+                    },
+                    @endforeach
+                ],
+                eventClick: function(info) {
+                    const url = '{{ route('events.show', '') }}';
+                    window.location = url + `/${info.event.id}`;
+                },
                 dateClick: function (info) {
                     $('.event-list').html('');
                     $.get({
-                        url: '{{ route('api.events.show') }}' + `?date=${info.dateStr}`,
+                        url: '{{ route('api.events.showByDay') }}' + `?date=${info.dateStr}`,
                         success: function (data) {
+                            const monthName = moment(info.dateStr).locale('pt').format('MMMM');
+                            const dayNumber = moment(info.dateStr).locale('pt').format('DD');
                             if (data.length === 0) {
-                                $('.event-list').append(`<h4 class="mx-3 text-center">Nenhum evento programado para hoje</h4>`);
+                                $('.event-list').append(`<h4 class="mx-3 text-center">Nenhum evento programado para ${dayNumber} de ${monthName}</h4>`);
                             } else {
                                 $('.event-list').append(`
-                                    <h4 class="text-center">Eventos de ${moment(info.dateStr).locale('pt').format('MMMM')}</h4>
-                                    <h2 class="text-yellow text-center font-weight-bold">${moment(info.dateStr).locale('pt').format('DD')}</h2>
+                                    <h4 class="text-center">Eventos de ${monthName}</h4>
+                                    <h2 class="text-yellow text-center font-weight-bold">${dayNumber}</h2>
                                     <hr>
                                 `);
                                 data.forEach((event) => {
+                                    let eventUrl = '{{ route('events.show', '') }}';
                                     $('.event-list').append(`
-                                        <a href="#${event.id}" class="text-dark">
+                                        <a href="${eventUrl}/${event.id}" class="text-dark">
                                             <div class="d-flex m-3">
                                                 <img src="${event.image}" alt="${event.name}" class="event-logo">
                                                 <div class="ml-3 justify-content-around event-description">
