@@ -39,7 +39,7 @@
             <hr>
             <p class="text-justify event-description">{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}</p>
             <div class="text-center mt-5">
-                <a href="#" class="btn btn-sm btn-success">Entre em contato para participar</a>
+                <a href="{{ route('contact') }}" class="btn btn-sm bg-yellow">Entre em contato para participar</a>
             </div>
         </div>
     </div>

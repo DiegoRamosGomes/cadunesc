@@ -28,10 +28,6 @@
             object-fit: cover;
         }
 
-        .btn-warning {
-            font-weight: bold;
-        }
-
         .name-project {
             text-align: left !important;
         }
@@ -59,7 +55,6 @@
             }
             h5 {
                 font-size: 0.8rem;
-                font-weight: bold;
             }
 
             #navbar-mobile {
