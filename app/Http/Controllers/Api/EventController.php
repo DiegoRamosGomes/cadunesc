@@ -8,6 +8,7 @@ use App\Helpers\RequestPaginator;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class EventController extends Controller
 {
@@ -20,7 +21,17 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'start_at' => 'required',
+            'end_at' => 'required',
+            'description' => 'required'
+        ]);
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
 
+        return Event::updateOrCreate($request->all());
     }
 
     public function show(Event $event)

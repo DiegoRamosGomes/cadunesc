@@ -14,7 +14,7 @@ class Event extends BaseModel
         'end_at',
     ];
 
-    protected $dateFormat = 'd/m/Y H:i:s';
+    protected $fillable = ['name', 'description', 'start_at', 'end_at', 'image'];
 
     protected $casts = [
         'created_at' => 'datetime:d/m/Y H:i:s',
