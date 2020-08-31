@@ -13,10 +13,14 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::post('login', 'Api\ApiTokenController@login');
 
-Route::get('/events', 'Api\EventController@index')->name('api.events.index');
-Route::post('/events', 'Api\EventController@store');
+Route::middleware('api.auth')->group(function () {
+    Route::prefix('events')->group(function () {
+        Route::get('', 'Api\EventController@index')->name('api.events.index');
+        Route::post('', 'Api\EventController@store');
 
-Route::get('/events/showByDay', 'Api\EventController@showByDay')->name('api.events.showByDay');
-Route::get('/events/{event}', 'Api\EventContr' .
-    'oller@show');
+        Route::get('showByDay', 'Api\EventController@showByDay')->name('api.events.showByDay');
+        Route::get('{event}', 'Api\EventController@show');
+    });
+});
