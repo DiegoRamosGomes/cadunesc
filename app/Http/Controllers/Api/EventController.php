@@ -25,7 +25,7 @@ class EventController extends Controller
             'name' => 'required',
             'start_at' => 'required',
             'end_at' => 'required',
-            'description' => 'required'
+            'description' => 'required|max:400'
         ]);
         if ($validator->fails()) {
             return $validator->errors();
@@ -42,5 +42,27 @@ class EventController extends Controller
     public function showByDay(Request $request)
     {
         return Event::whereDate('start_at', $request->date)->get();
+    }
+
+    public function update(Request $request, Event $event)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'start_at' => 'required',
+            'end_at' => 'required',
+            'description' => 'required|max:400'
+        ]);
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+
+        $event->update($request->all());
+        return $event;
+    }
+
+    public function destroy(Event $event)
+    {
+        $event->delete();
+        return response('', 204);
     }
 }

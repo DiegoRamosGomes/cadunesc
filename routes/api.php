@@ -22,5 +22,8 @@ Route::middleware('api.auth')->group(function () {
 
         Route::get('showByDay', 'Api\EventController@showByDay')->name('api.events.showByDay');
         Route::get('{event}', 'Api\EventController@show');
+
+        Route::put('{event}', 'Api\EventController@update');
+        Route::delete('{event}', 'Api\EventController@destroy');
     });
 });
