@@ -31,7 +31,7 @@ class EventController extends Controller
             return $validator->errors();
         }
 
-        return Event::updateOrCreate($request->all());
+        return Event::updateOrCreate($request->except(['api_token']));
     }
 
     public function show(Event $event)
