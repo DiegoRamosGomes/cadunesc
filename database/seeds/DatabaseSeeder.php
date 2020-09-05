@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Document;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use App\Models\Event;
 use Carbon\Carbon;
@@ -14,6 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::insert([
+            'name' => 'Demo',
+            'email' => 'demo@email.com',
+            'password' => '$2y$10$OhcsrrmeaOmO4fGSvJkwBO2ACCD6OSUCtVZ9NpF296T9iEPoB9DBq'
+        ]);
         for ($i = 1; $i <= 15; $i++) {
             Event::updateOrCreate([
                 'name' => "Evento $i"
@@ -22,6 +29,11 @@ class DatabaseSeeder extends Seeder
                 'start_at' => Carbon::now()->startOfDay(),
                 'end_at' => Carbon::now()->endOfDay(),
                 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU'
+            ]);
+
+            Document::updateOrCreate([
+                'title' => "Documento $i",
+                'url' => 'http://www.criciuma.sc.gov.br/pmc/webroot/upload/159923129704-09-2020.pdf'
             ]);
         }
     }
