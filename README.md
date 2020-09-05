@@ -1,5 +1,13 @@
 ## Centro Acadecimo Direito UNESC
 
-Site de exemplo para o centro academico de direito da unesc
+Passos para executar o projeto
 
-Todas as informações contidas nos arquivos de dados são de exemplo.
+* `baixar o composer`
+* `composer global require laravel/installer`
+* `git clone`
+* `composer install`
+* `renomear arquivo .env.example para .env` - se possivel manter o `.env.example`
+* `php artisan key:generate`
+* `php artisan migrate`
+* `php artisan db:seed`
+* `php artisan serve`
