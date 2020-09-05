@@ -26,4 +26,10 @@ Route::middleware('api.auth')->group(function () {
         Route::put('{event}', 'Api\EventController@update');
         Route::delete('{event}', 'Api\EventController@destroy');
     });
+
+    Route::prefix('documents')->group(function () {
+        Route::get('', 'Api\DocumentController@index');
+        Route::post('', 'Api\DocumentController@store');
+        Route::delete('{event}', 'Api\DocumentController@destroy');
+    });
 });
