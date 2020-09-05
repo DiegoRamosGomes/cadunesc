@@ -26,7 +26,7 @@
             <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}}">Inicio</a>
         </div>
         <div class="sub-navbar-menu">
-            <a href="#" class="{{ isRoute('students') ? 'active' : ''}}">Alunos</a>
+            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}}">Alunos</a>
         </div>
         <div class="sub-navbar-menu">
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>
@@ -43,7 +43,7 @@
             <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}}">Inicio</a>
         </div>
         <div class="col text-center font-weight-bold">
-            <a href="#" class="{{ isRoute('students') ? 'active' : ''}}">Alunos</a>
+            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}}">Alunos</a>
         </div>
         <div class="col text-center font-weight-bold">
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>
