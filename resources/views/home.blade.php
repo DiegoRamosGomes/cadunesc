@@ -56,7 +56,7 @@
 @endsection
 
 @section('content')
-    <x-home-slider></x-home-slider>
+    @include('components.home-slider')
     <hr class="m-0">
     <x-list-event></x-list-event>
     <hr style="margin: 50px 0">

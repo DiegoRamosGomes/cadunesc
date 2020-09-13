@@ -32,4 +32,10 @@ Route::middleware('api.auth')->group(function () {
         Route::post('', 'Api\DocumentController@store');
         Route::delete('{event}', 'Api\DocumentController@destroy');
     });
+
+    Route::prefix('sliders')->group(function () {
+        Route::get('', 'Api\SliderController@index');
+        Route::post('', 'Api\SliderController@store');
+        Route::delete('{slider}', 'Api\SliderController@destroy');
+    });
 });

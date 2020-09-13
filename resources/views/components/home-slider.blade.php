@@ -18,24 +18,26 @@
     </ul>
     <!-- The slideshow -->
     <div class="carousel-inner">
-        <div class="carousel-item active text-center">
-            <img class="img-fluid fit-image home-slider" src="https://www.w3schools.com/w3css/img_la.jpg" alt="Los Angeles">
+        @foreach($sliders as $index => $slider)
+        <div class="carousel-item text-center {{ $index == 0 ? 'active' : '' }}">
+            <img class="img-fluid fit-image home-slider" src="{{ $slider->image }}" alt="Los Angeles">
             <div class="carousel-caption mb-lg-5">
-                <a href="#" class="btn btn-sm btn-warning">Ver informações</a>
+                <a href="{{ $slider->action_url }}" class="btn btn-sm btn-warning">Ver informações</a>
             </div>
         </div>
-        <div class="carousel-item text-center">
-            <img class="img-fluid fit-image home-slider" src="https://www.w3schools.com/w3css/img_ny.jpg" alt="Chicago">
-            <div class="carousel-caption mb-lg-5">
-                <a href="#" class="btn btn-sm btn-warning">Ver informações</a>
-            </div>
-        </div>
-        <div class="carousel-item text-center">
-            <img class="img-fluid fit-image home-slider" src="https://www.w3schools.com/w3css/img_chicago.jpg" alt="New York">
-            <div class="carousel-caption mb-lg-5">
-                <a href="#" class="btn btn-sm btn-warning">Ver informações</a>
-            </div>
-        </div>
+        @endforeach
+{{--        <div class="carousel-item text-center">--}}
+{{--            <img class="img-fluid fit-image home-slider" src="https://www.w3schools.com/w3css/img_ny.jpg" alt="Chicago">--}}
+{{--            <div class="carousel-caption mb-lg-5">--}}
+{{--                <a href="#" class="btn btn-sm btn-warning">Ver informações</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="carousel-item text-center">--}}
+{{--            <img class="img-fluid fit-image home-slider" src="https://www.w3schools.com/w3css/img_chicago.jpg" alt="New York">--}}
+{{--            <div class="carousel-caption mb-lg-5">--}}
+{{--                <a href="#" class="btn btn-sm btn-warning">Ver informações</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
     <!-- Left and right controls -->
     <a class="carousel-control-prev" href="#demo" data-slide="prev">
