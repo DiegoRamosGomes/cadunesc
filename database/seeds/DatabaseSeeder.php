@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Document;
+use App\Models\Slider;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use App\Models\Event;
@@ -16,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::insert([
+        User::insertOrIgnore([
             'name' => 'Demo',
             'email' => 'demo@email.com',
             'password' => '$2y$10$OhcsrrmeaOmO4fGSvJkwBO2ACCD6OSUCtVZ9NpF296T9iEPoB9DBq'
@@ -36,5 +37,23 @@ class DatabaseSeeder extends Seeder
                 'url' => 'http://www.criciuma.sc.gov.br/pmc/webroot/upload/159923129704-09-2020.pdf'
             ]);
         }
+
+        Slider::insertOrIgnore([
+            [
+                'caption' => 'Slider 1',
+                'image' => 'https://www.w3schools.com/w3css/img_la.jpg',
+                'action_url' => '#'
+            ],
+            [
+                'caption' => 'Slider 2',
+                'image' => 'https://www.w3schools.com/w3css/img_ny.jpg',
+                'action_url' => '#'
+            ],
+            [
+                'caption' => 'Slider 3',
+                'image' => 'https://www.w3schools.com/w3css/img_chicago.jpg',
+                'action_url' => '#'
+            ],
+        ]);
     }
 }
