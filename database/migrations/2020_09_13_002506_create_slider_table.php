@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDocumentsTable extends Migration
+class CreateSliderTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateDocumentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('documents', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('url');
-            $table->timestamps();
+            $table->string('caption');
+            $table->string('action_url');
+            $table->string('image');
             $table->softDeletes();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +30,6 @@ class CreateDocumentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('documents');
+        Schema::dropIfExists('slider');
     }
 }
