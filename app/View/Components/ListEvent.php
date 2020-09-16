@@ -16,7 +16,10 @@ class ListEvent extends Component
      */
     public function __construct()
     {
-        $this->events = Event::limit(9)->get();
+        $this->events = Event::whereDate('start_at', '<', now())
+            ->orderBy('start_at')
+            ->limit(9)
+            ->get();
     }
 
     /**

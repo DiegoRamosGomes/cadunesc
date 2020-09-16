@@ -8,6 +8,7 @@ use App\Helpers\RequestPaginator;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class EventController extends Controller
@@ -25,13 +26,24 @@ class EventController extends Controller
             'name' => 'required',
             'start_at' => 'required',
             'end_at' => 'required',
-            'description' => 'required|max:400'
+            'description' => 'required|max:400',
+            "file" => "required|mimes:jpeg,jpg,png"
         ]);
         if ($validator->fails()) {
             return $validator->errors();
         }
 
-        return Event::updateOrCreate($request->except(['api_token']));
+        $event = Event::updateOrCreate($request->except(['api_token', 'file']));
+
+        if($request->hasFile('file')) {
+            if ($event->image) {
+                Storage::delete($event->image);
+            }
+            $event->image = Storage::put("public/events", $request->file('file'));
+            $event->save();
+        }
+
+        return $event;
     }
 
     public function show(Event $event)
