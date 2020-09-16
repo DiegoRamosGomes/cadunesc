@@ -28,9 +28,9 @@
         <hr>
         <ul class="list-group">
             @foreach($documents as $document)
-                <li class="list-group-item px-2 py-1 my-2 rounded">
-                    <a class="text-dark" href="{{ $document->url }}">{{ $document->title }}</a>
-                </li>
+                <a class="text-dark" href="{{ \Illuminate\Support\Facades\Storage::url($document->url) }}">
+                    <li class="list-group-item px-2 py-1 my-2 rounded">{{ $document->title }}</li>
+                </a>
             @endforeach
         </ul>
     </div>

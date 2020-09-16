@@ -8,6 +8,7 @@ use App\Helpers\RequestPaginator;
 use App\Http\Controllers\Controller;
 use App\Models\Document;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class DocumentController extends Controller
@@ -18,13 +19,23 @@ class DocumentController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'required',
-            'url' => 'required',
+            "file" => "required|mimetypes:application/pdf"
         ]);
         if ($validator->fails()) {
             return $validator->errors();
         }
 
-        return Document::updateOrCreate($request->except(['api_token']));
+        $document = Document::updateOrCreate($request->except(['api_token', 'file']));
+
+        if($request->hasFile('file')) {
+            if ($document->url) {
+                Storage::delete($document->url);
+            }
+            $document->url = Storage::put("public/documents", $request->file('file'));
+            $document->save();
+        }
+
+        return $document;
     }
 
     public function destroy($document)
