@@ -25,8 +25,17 @@
         <div class="sub-navbar-menu">
             <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}}">Inicio</a>
         </div>
+        <li class="nav-item dropdown sub-navbar-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Comprovantes
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ route('receipt.event')}}">Evento</a>
+                <a class="dropdown-item" href="{{ route('receipt.management') }}">Gestão</a>
+            </div>
+        </li>
         <div class="sub-navbar-menu">
-            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}}">Alunos</a>
+            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}}">Transparencia</a>
         </div>
         <div class="sub-navbar-menu">
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>

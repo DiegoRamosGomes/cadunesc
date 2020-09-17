@@ -14,7 +14,7 @@
 
 @section('content')
     <div class="container my-5">
-        <form action="#" class="form-inline">
+        <form action="" class="form-inline">
             <input type="submit" class="btn btn-sm bg-yellow" value="Pesquisar">
             <div class="input-group col pr-0">
                 <div class="input-group-prepend">
