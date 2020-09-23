@@ -43,10 +43,4 @@
             </div>
         </div>
     </div>
-    <div>
-        <h2 class="text-center">Eventos nos próximos 7 dias</h2>
-        <div >
-<!--lista com alguns eventos dos proximos dias, caso tenha-->
-        </div>
-    </div>
 @endsection

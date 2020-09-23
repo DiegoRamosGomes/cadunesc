@@ -2,11 +2,10 @@
     <div class="d-flex justify-content-around align-items-center flex-wrap">
         <div>
             <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">
-            {{--            <img class="logo" src="https://via.placeholder.com/150" alt="Logo">--}}
         </div>
         <div class="text-center mx-5">
-            <h3 class="font-weight-bold">Nome Oficial Do Centro Academico</h3>
-            <h5 class="font-weight-bold">Centro Academico de Curso</h5>
+            <h3 class="font-weight-bold">Centro Academico Denedito Narciso da Rocha</h3>
+            <h5 class="font-weight-bold">Centro Academico de Direito</h5>
         </div>
         <div class="d-flex justify-content-around align-items-center social_networks">
             <a target="_blank" href="{{ config('app.social_network_url.facebook') }}" class="navbar-socialmedia-link">

@@ -15,12 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 Route::post('login', 'Api\ApiTokenController@login');
 
+Route::get('events/ showByDay', 'Api\EventController@showByDay')->name('api.events.showByDay');
+
 Route::middleware('api.auth')->group(function () {
     Route::prefix('events')->group(function () {
         Route::get('', 'Api\EventController@index')->name('api.events.index');
         Route::post('', 'Api\EventController@store');
 
-        Route::get('showByDay', 'Api\EventController@showByDay')->name('api.events.showByDay');
         Route::get('{event}', 'Api\EventController@show');
 
         Route::put('{event}', 'Api\EventController@update');
