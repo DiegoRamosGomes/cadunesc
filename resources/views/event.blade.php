@@ -108,7 +108,7 @@
                                     $('.event-list').append(`
                                         <a href="${eventUrl}/${event.id}" class="text-dark">
                                             <div class="d-flex m-3">
-                                                <img src="${event.image}" alt="${event.name}" class="event-logo">
+                                                <img src="{{ \Illuminate\Support\Facades\Storage::url('') }}/${event.image}" alt="${event.name}" class="event-logo">
                                                 <div class="ml-3 justify-content-around event-description">
                                                     <p class="m-sm-0">${event.name}</p>
                                                     <p class="small m-0">${event.description}</p>
