@@ -39,7 +39,7 @@ class EventController extends Controller
             if ($event->image) {
                 Storage::delete($event->image);
             }
-            $event->image = Storage::put("public/events", $request->file('file'));
+            $event->image = Storage::put("events", $request->file('file'));
             $event->save();
         }
 

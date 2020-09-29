@@ -32,13 +32,13 @@
 
 @section('content')
     <div class="d-flex justify-content-center my-5 content">
-        <img src="http://diego-gomes.com.br:8000/storage/events/c8w172ETEQKGzy9l1HrI6R7wSVAJBGxmQMJVg4Kx.jpeg" alt="Imagem do evento" class="px-5 rounded">
+        <img src="{{ \Illuminate\Support\Facades\Storage::url($event->image) }}" alt="Imagem do evento" class="px-5 rounded">
         <div class="w-50 px-5" style="overflow-wrap: break-word;">
             <h2 class="text-center event-title">{{ $event->name }}</h2>
             <p class="text-center event-date">O evento inicia dia {{ $event->start_at->day }}
                 de {{ \Illuminate\Support\Str::studly($event->start_at->translatedFormat('F')) }}</p>
             <hr>
-            <p class="text-justify event-description">{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}</p>
+            <p class="text-justify event-description">{{ $event->description }}</p>
             <div class="text-center mt-5">
                 <a target="_blank" href="{{ $event->contact_button_url ?? route('contact') }}"
                    class="btn btn-sm bg-yellow">Entre em contato para participar</a>
