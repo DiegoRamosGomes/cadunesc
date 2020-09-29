@@ -24,7 +24,7 @@
                 {{ session()->get('message') }}
             </div>
         @endif
-        <h3 class="my-5 text-center font-weight-bold">Comprovante de participação em evento</h3>
+        <h3 class="my-5 text-center font-weight-bold">Comprovante de participação em gestão</h3>
         <form action="{{ route('contact.store') }}" method="post">
             @csrf
             <div class="form-group">

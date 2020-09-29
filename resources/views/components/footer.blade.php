@@ -1,10 +1,9 @@
 <div class="d-flex flex-wrap justify-content-center footer bg-dark text-white pb-5">
     <div class="w-50 d-flex flex-wrap justify-content-center my-3 mt-lg-5 mb-lg-5 text-center">
         <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">
-{{--        <img class="logo" src="https://via.placeholder.com/150" alt="Logo">--}}
         <div class="m-3 name-project">
-            <p class="m-0">Nome Oficial Do Centro Academico</p>
-            <p class="m-0">Centro Academico de Curso</p>
+            <p class="m-0">Centro Academico Denedito Narciso da Rocha</p>
+            <p class="m-0">Centro Academico de Direito</p>
         </div>
     </div>
     <div class="w-50 d-flex flex-wrap justify-content-center align-items-center">
