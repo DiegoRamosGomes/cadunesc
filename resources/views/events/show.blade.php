@@ -35,18 +35,14 @@
         <img src="{{ $event->image }}" alt="Imagem do evento" class="px-5 rounded">
         <div class="w-50 px-5" style="overflow-wrap: break-word;">
             <h2 class="text-center event-title">{{ $event->name }}</h2>
-            <p class="text-center event-date">O evento inicia dia {{ $event->start_at->day }} de {{ $event->start_at->format('F') }}</p>
+            <p class="text-center event-date">O evento inicia dia {{ $event->start_at->day }}
+                de {{ \Illuminate\Support\Str::studly($event->start_at->translatedFormat('F')) }}</p>
             <hr>
             <p class="text-justify event-description">{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}{{ $event->description }}</p>
             <div class="text-center mt-5">
-                <a href="{{ route('contact') }}" class="btn btn-sm bg-yellow">Entre em contato para participar</a>
+                <a target="_blank" href="{{ $event->contact_button_url ?? route('contact') }}"
+                   class="btn btn-sm bg-yellow">Entre em contato para participar</a>
             </div>
-        </div>
-    </div>
-    <div>
-        <h2 class="text-center">Eventos nos próximos 7 dias</h2>
-        <div >
-<!--lista com alguns eventos dos proximos dias, caso tenha-->
         </div>
     </div>
 @endsection
