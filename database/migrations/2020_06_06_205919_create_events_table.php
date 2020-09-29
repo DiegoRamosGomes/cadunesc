@@ -20,6 +20,7 @@ class CreateEventsTable extends Migration
             $table->text('name')->nullable(false);
             $table->text('description')->nullable(false);
             $table->text('image');
+            $table->text('contact_button_url');
             $table->timestamp('start_at');
             $table->timestamp('end_at');
         });

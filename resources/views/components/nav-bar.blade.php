@@ -14,8 +14,8 @@
             <a target="_blank" href="{{ config('app.social_network_url.instagram') }}" class="navbar-socialmedia-link">
                 <i class="fa fa-instagram"></i>
             </a>
-            <a target="_blank" href="{{ config('app.social_network_url.twitter') }}" class="navbar-socialmedia-link">
-                <i class="fa fa-twitter"></i>
+            <a target="_blank" href="{{ config('app.social_network_url.whatsapp') }}" class="navbar-socialmedia-link">
+                <i class="fa fa-whatsapp"></i>
             </a>
         </div>
     </div>

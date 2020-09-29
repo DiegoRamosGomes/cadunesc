@@ -18,7 +18,7 @@ class ListEvent extends Component
     {
         $this->events = Event::whereDate('start_at', '<', now())
             ->orderBy('start_at')
-            ->limit(9)
+            ->limit(3)
             ->get();
     }
 

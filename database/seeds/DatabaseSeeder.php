@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
                 'description' => Str::random(50),
                 'start_at' => Carbon::now()->startOfDay(),
                 'end_at' => Carbon::now()->endOfDay(),
+                'contact_button_url' => 'https://google.com',
                 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_JFyvU2eGQdS6hx7TQOloUXX3EpC_947U-jWJwF-OdfB2EAQM&usqp=CAU'
             ]);
 

@@ -108,7 +108,7 @@
                                     $('.event-list').append(`
                                         <a href="${eventUrl}/${event.id}" class="text-dark">
                                             <div class="d-flex m-3">
-                                                <img src="http://diego-gomes.com.br:8000/storage/events/c8w172ETEQKGzy9l1HrI6R7wSVAJBGxmQMJVg4Kx.jpeg" alt="${event.name}" class="event-logo">
+                                                <img src="{{ asset('/storage/') }}/${event.image}" alt="${event.name}" class="event-logo">
                                                 <div class="ml-3 justify-content-around event-description">
                                                     <p class="m-sm-0">${event.name}</p>
                                                     <p class="small m-0">${event.description}</p>

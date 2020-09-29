@@ -6,7 +6,7 @@ return [
     'social_network_url' => [
         'instagram' => 'https://instagram.com',
         'facebook' => 'https://facebook.com',
-        'twitter' => 'https://twitter.com'
+        'whatsapp' => 'https://api.whatsapp.com/send?phone=5548991700037&text=Ola!'
     ],
     'phones' => [
         '(48) 9 0000-0000',
@@ -92,7 +92,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt',
 
     /*
     |--------------------------------------------------------------------------
