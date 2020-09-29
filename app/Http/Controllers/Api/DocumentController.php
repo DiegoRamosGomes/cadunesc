@@ -31,7 +31,7 @@ class DocumentController extends Controller
             if ($document->url) {
                 Storage::delete($document->url);
             }
-            $document->url = Storage::put("public/documents", $request->file('file'));
+            $document->url = Storage::put("documents", $request->file('file'));
             $document->save();
         }
 
