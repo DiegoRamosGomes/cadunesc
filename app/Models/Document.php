@@ -12,10 +12,4 @@ class Document extends BaseModel
     ];
 
     protected $fillable = ['title', 'url'];
-
-    protected $casts = [
-        'created_at' => 'datetime:d/m/Y H:i:s',
-        'updated_at' => 'datetime:d/m/Y H:i:s',
-        'deleted_at' => 'datetime:d/m/Y H:i:s',
-    ];
 }
