@@ -59,13 +59,18 @@ class EventController extends Controller
     public function update(Request $request, Event $event)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'start_at' => 'required',
-            'end_at' => 'required',
-            'description' => 'required|max:400'
+            'title' => 'required',
+            'content' => 'required',
         ]);
         if ($validator->fails()) {
             return $validator->errors();
+        }
+        if($request->hasFile('file')) {
+            if ($event->image) {
+                Storage::delete($event->image);
+            }
+            $event->image = Storage::put("events", $request->file('file'));
+            $event->save();
         }
 
         $event->update($request->all());

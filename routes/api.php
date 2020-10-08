@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::post('login', 'Api\ApiTokenController@login');
 
-Route::get('events/ showByDay', 'Api\EventController@showByDay')->name('api.events.showByDay');
+Route::get('events/showByDay', 'Api\EventController@showByDay')->name('api.events.showByDay');
 
 Route::middleware('api.auth')->group(function () {
     Route::prefix('events')->group(function () {
@@ -38,5 +38,12 @@ Route::middleware('api.auth')->group(function () {
         Route::get('', 'Api\SliderController@index');
         Route::post('', 'Api\SliderController@store');
         Route::delete('{slider}', 'Api\SliderController@destroy');
+    });
+
+    Route::prefix('posts')->group(function () {
+        Route::get('', 'Api\PostController@index');
+        Route::post('', 'Api\PostController@store');
+        Route::put('{post}', 'Api\PostController@update');
+        Route::delete('{post}', 'Api\PostController@destroy');
     });
 });
