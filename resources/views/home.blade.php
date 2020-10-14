@@ -9,8 +9,15 @@
             grid-template-columns: auto auto auto;
             padding: 10px;
             justify-items: center;
-            width: 70%;
             align-self: center;
+        }
+
+        .grid-container {
+            width: 70%;
+        }
+
+        .grid-container .grid-post {
+            width: 80%;
         }
 
         .grid-item {
@@ -59,6 +66,8 @@
     @include('components.home-slider')
     <hr class="m-0">
     <x-list-event></x-list-event>
+    <hr style="margin: 50px 0">
+    @include('components.last-posts')
     <hr style="margin: 50px 0">
     <x-home-map></x-home-map>
 @endsection

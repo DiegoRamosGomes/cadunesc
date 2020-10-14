@@ -27,7 +27,7 @@
         <li class="nav-item dropdown sub-navbar-menu">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Comprovantes</a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('receipt.event')}}">Evento</a>
+                <a class="dropdown-item" href="{{ route('receipt.event') }}">Evento</a>
                 <a class="dropdown-item" href="{{ route('receipt.management') }}">Gestão</a>
             </div>
         </li>
@@ -48,6 +48,12 @@
 </nav>
 <nav id="navbar-mobile" class="fixed-bottom">
     <div class="content-more-items d-none bg-yellow" style="border-bottom: 1px solid black">
+        <a href="{{ route('receipt.event') }}" class="{{ isRoute('receipt.event') ? 'active' : ''}} text-dark">
+            <div class="text-center font-weight-bold py-3">Comprovante Evento</div>
+        </a>
+        <a href="{{ route('receipt.management') }}" class="{{ isRoute('receipt.management') ? 'active' : ''}} text-dark">
+            <div class="text-center font-weight-bold py-3">Comprovante Gestão</div>
+        </a>
         <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}} text-dark">
             <div class="text-center font-weight-bold py-3">Noticias</div>
         </a>
@@ -56,13 +62,14 @@
         </a>
     </div>
     <div class="row align-items-center p-3" style="background-color: #FED605;">
-        <div class="col text-center font-weight-bold">
+        <div class="col-2 text-center font-weight-bold">
             <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}} text-dark">Inicio</a>
         </div>
         <div class="col text-center font-weight-bold">
-            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}} text-dark">Alunos</a>
+            <a href="{{ route('students') }}"
+               class="{{ isRoute('students') ? 'active' : ''}} text-dark">Transparencia</a>
         </div>
-        <div class="col text-center font-weight-bold">
+        <div class="col-3 text-center font-weight-bold">
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}} text-dark">Eventos</a>
         </div>
         <div class="col-2 text-center font-weight-bold more-items">
