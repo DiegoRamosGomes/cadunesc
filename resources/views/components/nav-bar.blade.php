@@ -25,9 +25,7 @@
             <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}}">Inicio</a>
         </div>
         <li class="nav-item dropdown sub-navbar-menu">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                Comprovantes
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Comprovantes</a>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="{{ route('receipt.event')}}">Evento</a>
                 <a class="dropdown-item" href="{{ route('receipt.management') }}">Gestão</a>
@@ -40,24 +38,49 @@
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>
         </div>
         <div class="sub-navbar-menu">
+            <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}}">Noticias</a>
+        </div>
+        <div class="sub-navbar-menu">
             <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}}">Contato</a>
         </div>
     </div>
     <hr class="mb-0">
 </nav>
 <nav id="navbar-mobile" class="fixed-bottom">
+    <div class="content-more-items d-none bg-yellow" style="border-bottom: 1px solid black">
+        <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}} text-dark">
+            <div class="text-center font-weight-bold py-3">Noticias</div>
+        </a>
+        <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}} text-dark">
+            <div class="text-center font-weight-bold py-3">Contato</div>
+        </a>
+    </div>
     <div class="row align-items-center p-3" style="background-color: #FED605;">
         <div class="col text-center font-weight-bold">
-            <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}}">Inicio</a>
+            <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}} text-dark">Inicio</a>
         </div>
         <div class="col text-center font-weight-bold">
-            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}}">Alunos</a>
+            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}} text-dark">Alunos</a>
         </div>
         <div class="col text-center font-weight-bold">
-            <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>
+            <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}} text-dark">Eventos</a>
         </div>
-        <div class="col text-center font-weight-bold">
-            <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}}">Contato</a>
+        <div class="col-2 text-center font-weight-bold more-items">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
         </div>
     </div>
 </nav>
+
+
+
+@push('scripts')
+    <script>
+        $('#navbar-mobile .more-items').on('click', () => {
+            const divMoreContent = $('.content-more-items');
+            divMoreContent.fadeToggle();
+            if (divMoreContent.hasClass('d-none')) {
+                divMoreContent.toggleClass('d-none');
+            }
+        });
+    </script>
+@endpush
