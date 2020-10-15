@@ -14,13 +14,6 @@
             @endforeach
             <p class="small m-1"><a class="text-white" href="mailto://{{ config('app.mail') }}">{{ config('app.mail') }}</a></p>
         </div>
-        <div class="w-25 text-center" id="footer-menus">
-            <p class="font-weight-bold">Menus</p>
-            <p class="small m-1"><a class="text-white" href="{{ route('home') }}">Inicio</a></p>
-            <p class="small m-1"><a class="text-white" href="#">Alunos</a></p>
-            <p class="small m-1"><a class="text-white" href="{{ route('events') }}">Eventos</a></p>
-            <p class="small m-1"><a class="text-white" href="{{ route('contact') }}">Contato</a></p>
-        </div>
         <div class="w-25 text-center">
             <p class="font-weight-bold">Medias Sociais</p>
             <p class="small m-1"><a class="text-white" href="{{ config('app.social_network_url.facebook') }}">Facebook</a></p>
