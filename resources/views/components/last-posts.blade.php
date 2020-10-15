@@ -4,9 +4,9 @@
         <div class="grid-container grid-post">
             @foreach ($lastPosts as $post)
                 <a href="{{ route('posts.show', $post->id) }}" class="text-dark">
-                    <div class="grid-item text-justify">
-                        <h4 class="font-weight-bold">{{ $post->title }}</h4>
-                        {!! \Illuminate\Support\Str::limit(preg_replace("/<img[^>]+\>/i", " (image) ", $post->content), 150) !!}
+                    <div class="grid-item">
+                        <h4 class="font-weight-bold text-left">{{ $post->title }}</h4>
+                        <p class="my-0 text-justify">{!! \Illuminate\Support\Str::limit(strip_tags($post->content), 150) !!}</p>
                     </div>
                 </a>
             @endforeach

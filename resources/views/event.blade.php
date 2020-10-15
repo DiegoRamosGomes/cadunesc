@@ -14,6 +14,7 @@
 
         .event-logo {
             width: 100px;
+            height: 100px;
         }
 
         .event-description {
@@ -42,6 +43,7 @@
 
             .event-logo {
                 width: 20%;
+                height: 20%;
             }
 
             .m-sm-0 {
@@ -105,13 +107,14 @@
                                 `);
                                 data.forEach((event) => {
                                     let eventUrl = '{{ route('events.show', '') }}';
+                                    console.log(event.image);
                                     $('.event-list').append(`
                                         <a href="${eventUrl}/${event.id}" class="text-dark">
                                             <div class="d-flex m-3">
                                                 <img src="{{ asset('/storage/') }}/${event.image}" alt="${event.name}" class="event-logo">
                                                 <div class="ml-3 justify-content-around event-description">
                                                     <p class="m-sm-0">${event.name}</p>
-                                                    <p class="small m-0">${event.description}</p>
+                                                    <p class="small m-0">${event.description.substring(0, 200)}</p>
                                                 </div>
                                             </div>
                                         </a>

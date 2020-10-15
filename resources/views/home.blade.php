@@ -12,12 +12,12 @@
             align-self: center;
         }
 
-        .grid-container {
+        .grid-container:not(.grid-post) {
             width: 70%;
         }
 
-        .grid-container .grid-post {
-            width: 80%;
+        .grid-container.grid-post {
+            width: 90%;
         }
 
         .grid-item {

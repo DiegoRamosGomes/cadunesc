@@ -21,6 +21,7 @@ class CreateEventsTable extends Migration
             $table->text('description')->nullable(false);
             $table->text('image');
             $table->text('contact_button_url');
+            $table->string('address');
             $table->timestamp('start_at');
             $table->timestamp('end_at');
         });

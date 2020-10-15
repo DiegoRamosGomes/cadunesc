@@ -10,7 +10,7 @@ class PostController
 {
     public function index()
     {
-        $posts = Post::paginate(5);
+        $posts = Post::orderBy('created_at')->paginate(5);
         return view('posts.index')->with([
             'posts' => $posts
         ]);

@@ -17,7 +17,7 @@ class EventController extends Controller
 
     public function index()
     {
-        return $this->rawPagination(Event::query());
+        return $this->rawPagination(Event::orderBy('created_at'));
     }
 
     public function store(Request $request)
@@ -48,6 +48,7 @@ class EventController extends Controller
 
     public function show(Event $event)
     {
+        $event->image = Storage::url($event->image);
         return $event;
     }
 
@@ -62,7 +63,7 @@ class EventController extends Controller
             'name' => 'required',
             'start_at' => 'required',
             'end_at' => 'required',
-            'description' => 'required|max:400',
+            'description' => 'required',
             "file" => "required|mimes:jpeg,jpg,png"
         ]);
         if ($validator->fails()) {
