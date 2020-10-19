@@ -64,7 +64,7 @@ class EventController extends Controller
             'start_at' => 'required',
             'end_at' => 'required',
             'description' => 'required',
-            "file" => "required|mimes:jpeg,jpg,png"
+            "file" => "mimes:jpeg,jpg,png"
         ]);
         if ($validator->fails()) {
             return $validator->errors();
