@@ -37,7 +37,7 @@ class SliderController extends Controller
             if ($slide->image) {
                 Storage::delete($slide->image);
             }
-            $slide->image = Storage::put("documents", $request->file('file'));
+            $slide->image = Storage::put("sliders", $request->file('file'));
             $slide->save();
         }
 

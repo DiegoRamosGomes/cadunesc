@@ -15,6 +15,7 @@ class Slider extends Model
 
     public function getImageAttribute()
     {
+
         return Storage::url($this->attributes['image']);
     }
 }
