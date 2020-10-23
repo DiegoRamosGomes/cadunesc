@@ -48,7 +48,6 @@ class EventController extends Controller
 
     public function show(Event $event)
     {
-        $event->image = Storage::url($event->image);
         return $event;
     }
 

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Storage;
+
 class Document extends BaseModel
 {
 
@@ -12,4 +14,9 @@ class Document extends BaseModel
     ];
 
     protected $fillable = ['title', 'url'];
+
+    public function getUrlAttribute()
+    {
+        return Storage::url($this->attributes['url']);
+    }
 }
