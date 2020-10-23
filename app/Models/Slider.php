@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Storage;
 class Slider extends Model
 {
     protected $fillable = [
-       'caption',
-       'action_url',
-       'image'
+        'caption',
+        'action_url',
+        'image'
     ];
 
     public function getImageAttribute()
     {
-
-        return Storage::url($this->attributes['image']);
+        $file = $this->attributes['image'];
+        return Storage::url($file);
     }
 }
