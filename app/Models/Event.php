@@ -20,6 +20,7 @@ class Event extends BaseModel
 
     public function getImageAttribute()
     {
+
         return Storage::url($this->attributes['image']);
     }
 
