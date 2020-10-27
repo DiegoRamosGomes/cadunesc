@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
             $table->softDeletes();
             $table->text('name')->nullable(false);
             $table->text('description')->nullable(false);
-            $table->text('image');
+            $table->text('image')->nullable(true);
             $table->text('contact_button_url');
             $table->string('address');
             $table->timestamp('start_at');

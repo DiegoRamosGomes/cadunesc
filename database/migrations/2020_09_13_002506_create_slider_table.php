@@ -17,7 +17,7 @@ class CreateSliderTable extends Migration
             $table->id();
             $table->string('caption');
             $table->string('action_url');
-            $table->string('image');
+            $table->string('image')->nullable(true);
             $table->softDeletes();
             $table->timestamps();
         });

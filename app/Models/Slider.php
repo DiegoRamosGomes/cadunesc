@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
 class Slider extends Model
@@ -15,7 +16,9 @@ class Slider extends Model
 
     public function getImageAttribute()
     {
-        $file = $this->attributes['image'];
-        return Storage::url($file);
+        if(Arr::has($this->attributes, 'image')) {
+            return Storage::url($this->attributes['image']);
+        }
+        return null;
     }
 }

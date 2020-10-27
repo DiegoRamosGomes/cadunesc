@@ -4,6 +4,7 @@
 namespace App\Models;
 
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
 class Event extends BaseModel
@@ -20,8 +21,10 @@ class Event extends BaseModel
 
     public function getImageAttribute()
     {
-
-        return Storage::url($this->attributes['image']);
+        if(Arr::has($this->attributes, 'image')) {
+            return Storage::url($this->attributes['image']);
+        }
+        return null;
     }
 
 }
