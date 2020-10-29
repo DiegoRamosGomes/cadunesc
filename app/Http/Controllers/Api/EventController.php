@@ -26,6 +26,7 @@ class EventController extends Controller
             'name' => 'required',
             'start_at' => 'required',
             'end_at' => 'required',
+            'contact_button_url' => 'required',
             'description' => 'required|max:400',
             "file" => "required|mimes:jpeg,jpg,png"
         ]);
@@ -62,6 +63,7 @@ class EventController extends Controller
             'name' => 'required',
             'start_at' => 'required',
             'end_at' => 'required',
+            'contact_button_url' => 'required',
             'description' => 'required',
             "file" => "mimes:jpeg,jpg,png"
         ]);

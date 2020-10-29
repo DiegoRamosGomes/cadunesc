@@ -17,7 +17,7 @@ class Event extends BaseModel
         'end_at',
     ];
 
-    protected $fillable = ['name', 'description', 'start_at', 'end_at', 'image', 'address'];
+    protected $fillable = ['name', 'description', 'start_at', 'end_at', 'image', 'address', 'contact_button_url'];
 
     public function getImageAttribute()
     {
