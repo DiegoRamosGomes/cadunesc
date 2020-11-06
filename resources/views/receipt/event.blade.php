@@ -25,7 +25,7 @@
             </div>
         @endif
         <h3 class="my-5 text-center font-weight-bold">Comprovante de participação em evento</h3>
-        <form action="{{ route('contact.store') }}" method="post">
+        <form action="{{ route('receipt.store-event') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="email">Email</label>
