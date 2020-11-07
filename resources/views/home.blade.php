@@ -78,7 +78,7 @@
         let marker;
 
         function initMap() {
-            const latlong = {lat: -23.6815314, lng: -46.8755};
+            const latlong = {lat: -28.702500, lng: -49.4106887};
             map = new google.maps.Map(document.getElementById('map'), {
                 center: latlong,
                 zoom: 15

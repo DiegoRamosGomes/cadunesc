@@ -1,5 +1,5 @@
 <div class="text-center mt-5">
-    <h3 class="font-weight-bold mb-3">Ultimas noticias</h3>
+    <h3 class="font-weight-bold mb-3">Últimas Notícias</h3>
     <div class="d-flex justify-content-center">
         <div class="grid-container grid-post">
             @foreach ($lastPosts as $post)

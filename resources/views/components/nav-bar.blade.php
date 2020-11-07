@@ -4,8 +4,8 @@
             <img class="logo" src="{{ asset('storage/logo.png') }}" alt="Logo">
         </div>
         <div class="text-center mx-5">
-            <h3 class="font-weight-bold">Centro Academico Denedito Narciso da Rocha</h3>
-            <h5 class="font-weight-bold">Centro Academico de Direito</h5>
+            <h3 class="font-weight-bold">Centro Acadêmico Benedito Narciso da Rocha</h3>
+            <h5 class="font-weight-bold">Direito - UNESC</h5>
         </div>
         <div class="d-flex justify-content-around align-items-center social_networks">
             <a target="_blank" href="{{ config('app.social_network_url.facebook') }}" class="navbar-socialmedia-link">
@@ -22,7 +22,7 @@
     <hr>
     <div id="sub-navbar">
         <div class="sub-navbar-menu">
-            <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}}">Inicio</a>
+            <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}}">Início</a>
         </div>
         <li class="nav-item dropdown sub-navbar-menu">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Comprovantes</a>
@@ -32,13 +32,13 @@
             </div>
         </li>
         <div class="sub-navbar-menu">
-            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}}">Transparencia</a>
+            <a href="{{ route('students') }}" class="{{ isRoute('students') ? 'active' : ''}}">Transparência</a>
         </div>
         <div class="sub-navbar-menu">
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>
         </div>
         <div class="sub-navbar-menu">
-            <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}}">Noticias</a>
+            <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}}">Notícias</a>
         </div>
         <div class="sub-navbar-menu">
             <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}}">Contato</a>
@@ -55,7 +55,7 @@
             <div class="text-center font-weight-bold py-3">Comprovante Gestão</div>
         </a>
         <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}} text-dark">
-            <div class="text-center font-weight-bold py-3">Noticias</div>
+            <div class="text-center font-weight-bold py-3">Notícias</div>
         </a>
         <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}} text-dark">
             <div class="text-center font-weight-bold py-3">Contato</div>
@@ -63,11 +63,11 @@
     </div>
     <div class="row align-items-center p-3" style="background-color: #FED605;">
         <div class="col-2 text-center font-weight-bold">
-            <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}} text-dark">Inicio</a>
+            <a href="{{ route('home') }}" class="{{ isRoute('home') ? 'active' : ''}} text-dark">Início</a>
         </div>
         <div class="col text-center font-weight-bold">
             <a href="{{ route('students') }}"
-               class="{{ isRoute('students') ? 'active' : ''}} text-dark">Transparencia</a>
+               class="{{ isRoute('students') ? 'active' : ''}} text-dark">Transparência</a>
         </div>
         <div class="col-3 text-center font-weight-bold">
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}} text-dark">Eventos</a>

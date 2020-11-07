@@ -4,13 +4,12 @@ return [
 
     'google_maps_api_key' => env('GOOGLE_MAPS_API_KEY'),
     'social_network_url' => [
-        'instagram' => 'https://instagram.com',
-        'facebook' => 'https://facebook.com',
+        'instagram' => 'https://instagram.com/cadunesc?igshid=99pk8uql4yei',
+        'facebook' => 'https://m.facebook.com/cadunesc/',
         'whatsapp' => 'https://api.whatsapp.com/send?phone=5548991700037&text=Ola!'
     ],
     'phones' => [
-        '(48) 9 0000-0000',
-        '(48) 3333-3333'
+        '(48) 9 9170-0037',
     ],
     'mail' => env('MAIL'),
 
