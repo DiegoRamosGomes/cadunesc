@@ -1,5 +1,5 @@
 <div class="text-center mt-5">
-    <h3 class="font-weight-bold">Ultimos eventos</h3>
+    <h3 class="font-weight-bold">Últimos Eventos</h3>
     <div class="d-flex justify-content-center">
         <div class="grid-container">
             @foreach ($events as $event)
