@@ -3,10 +3,12 @@
     <div class="d-flex justify-content-center">
         <div class="grid-container">
             @foreach ($events as $event)
-                <div class="grid-item">
-                    <img src="{{ $event->image }}" alt="Evento" class="rounded">
-                    <p class="">{{ $event->name }}</p>
-                </div>
+                <a href="{{ route('events.show', $event->id) }}" class="text-dark">
+                    <div class="grid-item">
+                        <img src="{{ $event->image }}" alt="Evento" class="rounded">
+                        <p class="">{{ $event->name }}</p>
+                    </div>
+                </a>
             @endforeach
         </div>
     </div>
