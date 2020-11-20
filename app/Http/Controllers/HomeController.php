@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        $lastPosts = Post::orderBy('created_at')->limit(3)->get();
+        $lastPosts = Post::orderBy('created_at', 'desc')->limit(3)->get();
         return view('home')->with([
             'sliders' => $sliders,
             'lastPosts' => $lastPosts
