@@ -21,8 +21,10 @@
                 {{ session()->get('message') }}
             </div>
         @endif
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut distinctio eum in odio, quaerat sapiente vitae.
-            Aliquam deleniti, error, esse fuga, illum iure laborum nulla quis repudiandae similique vero voluptatem?</p>
+        <p>Você gostaria de falar conosco? Deixe seu recado espontâneo, críticas, dicas, sugestões...
+            Sinta-se a vontade! Seremos gratos em atendê-lo e responderemos assim que possível ♥</p>
+        <p>Observação: Ao optar pela opção do anonimato, certifique-se de que realmente não deseja receber uma resposta
+            para a sua mensagem.</p>
         <h1 class="my-5 text-center font-weight-bold">Fale Conosco</h1>
         <form action="{{ route('contact.store') }}" method="post">
             @csrf

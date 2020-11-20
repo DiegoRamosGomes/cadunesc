@@ -9,8 +9,15 @@
             grid-template-columns: auto auto auto;
             padding: 10px;
             justify-items: center;
-            width: 70%;
             align-self: center;
+        }
+
+        .grid-container:not(.grid-post) {
+            width: 70%;
+        }
+
+        .grid-container.grid-post {
+            width: 90%;
         }
 
         .grid-item {
@@ -60,6 +67,8 @@
     <hr class="m-0">
     <x-list-event></x-list-event>
     <hr style="margin: 50px 0">
+    @include('components.last-posts')
+    <hr style="margin: 50px 0">
     <x-home-map></x-home-map>
 @endsection
 
@@ -69,7 +78,7 @@
         let marker;
 
         function initMap() {
-            const latlong = {lat: -23.6815314, lng: -46.8755};
+            const latlong = {lat: -28.702500, lng: -49.4106887};
             map = new google.maps.Map(document.getElementById('map'), {
                 center: latlong,
                 zoom: 15

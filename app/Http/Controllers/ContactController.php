@@ -4,8 +4,10 @@
 namespace App\Http\Controllers;
 
 
+use App\Mail\ContactMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -16,8 +18,12 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        $contact = new Contact($request->all());
+        $contact = new Contact;
+        $contact->fill($request->except('_token'));
         $contact->save();
+
+        Mail::to(config('app.mail'))->send(new ContactMail($request->email, $request->subject, $request->text));
+
         return redirect()->back()->with('message', 'Contato enviado com sucesso!');
     }
 }

@@ -32,7 +32,7 @@
 
 @section('content')
     <div class="d-flex justify-content-center my-5 content">
-        <img src="{{ \Illuminate\Support\Facades\Storage::url($event->image) }}" alt="Imagem do evento" class="px-5 rounded">
+        <img src="{{ $event->image }}" alt="Imagem do evento" class="px-5 rounded">
         <div class="w-50 px-5" style="overflow-wrap: break-word;">
             <h2 class="text-center event-title">{{ $event->name }}</h2>
             <p class="text-center event-date">O evento inicia dia {{ $event->start_at->day }}
