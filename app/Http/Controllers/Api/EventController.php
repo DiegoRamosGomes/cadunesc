@@ -27,7 +27,7 @@ class EventController extends Controller
             'start_at' => 'required',
             'end_at' => 'required',
             'contact_button_url' => 'required',
-            'description' => 'required|max:400',
+            'description' => 'required|max:2048',
             "file" => "required|mimes:jpeg,jpg,png"
         ]);
         if ($validator->fails()) {
