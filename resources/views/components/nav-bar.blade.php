@@ -37,9 +37,13 @@
         <div class="sub-navbar-menu">
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>
         </div>
-        <div class="sub-navbar-menu">
-            <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}}">Notícias</a>
-        </div>
+        <li class="nav-item dropdown sub-navbar-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Noticias</a>
+            <div class="dropdown-menu">
+                <a target="_blank" class="dropdown-item" href="https://pesquisaeextensaoc.wixsite.com/cadunesc/">Blog Juridico</a>
+                <a class="dropdown-item" href="{{ route('posts') }}">Postagens</a>
+            </div>
+        </li>
         <div class="sub-navbar-menu">
             <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}}">Contato</a>
         </div>
