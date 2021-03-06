@@ -40,7 +40,7 @@
         <li class="nav-item dropdown sub-navbar-menu">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Noticias</a>
             <div class="dropdown-menu">
-                <a target="_blank" class="dropdown-item" href="https://pesquisaeextensaoc.wixsite.com/cadunesc/">Blog Juridico</a>
+                <a target="_blank" class="dropdown-item" href="https://pesquisaeextensaoc.wixsite.com/cadunesc/">Departamento Pesquisa e Extensão</a>
                 <a class="dropdown-item" href="{{ route('posts') }}">Postagens</a>
             </div>
         </li>
@@ -62,7 +62,7 @@
             <div class="text-center font-weight-bold py-3">Postagens</div>
         </a>
         <a target="_blank" href="https://pesquisaeextensaoc.wixsite.com/cadunesc/" class="text-dark">
-            <div class="text-center font-weight-bold py-3">Blog Jurídico</div>
+            <div class="text-center font-weight-bold py-3">Departamento Pesquisa e Extensão</div>
         </a>
         <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}} text-dark">
             <div class="text-center font-weight-bold py-3">Contato</div>
