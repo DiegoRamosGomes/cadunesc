@@ -59,7 +59,10 @@
             <div class="text-center font-weight-bold py-3">Comprovante Gestão</div>
         </a>
         <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}} text-dark">
-            <div class="text-center font-weight-bold py-3">Notícias</div>
+            <div class="text-center font-weight-bold py-3">Postagens</div>
+        </a>
+        <a target="_blank" href="https://pesquisaeextensaoc.wixsite.com/cadunesc/" class="text-dark">
+            <div class="text-center font-weight-bold py-3">Blog Jurídico</div>
         </a>
         <a href="{{ route('contact') }}" class="{{ isRoute('contact') ? 'active' : ''}} text-dark">
             <div class="text-center font-weight-bold py-3">Contato</div>
