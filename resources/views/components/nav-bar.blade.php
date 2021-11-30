@@ -37,6 +37,9 @@
         <div class="sub-navbar-menu">
             <a href="{{ route('events') }}" class="{{ isRoute('events') ? 'active' : ''}}">Eventos</a>
         </div>
+        <div class="sub-navbar-menu">
+            <a href="{{ route('journal') }}" class="{{ isRoute('journal') ? 'active' : ''}}">Jornal</a>
+        </div>
         <li class="nav-item dropdown sub-navbar-menu">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Noticias</a>
             <div class="dropdown-menu">

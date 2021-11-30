@@ -21,6 +21,9 @@ Route::post('/contact', 'ContactController@store')->name('contact.store');
 Route::get('/events', 'EventController@index')->name('events');
 Route::get('/events/{event}', 'EventController@show')->name('events.show');
 
+Route::get('/journal', 'JournalController@index')->name('journal');
+Route::get('/journal/get-document', 'JournalController@getDocument')->name('journal.get-document');
+
 Route::get('/documents', 'DocumentController@index')->name('students');
 
 Route::get('/posts', 'PostController@index')->name('posts');
