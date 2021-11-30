@@ -5,6 +5,7 @@
         .image-content {
             display: flex;
             justify-content: center;
+            padding: 10px 0;
         }
 
         .image-content img {
