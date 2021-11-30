@@ -61,6 +61,9 @@
         <a href="{{ route('receipt.management') }}" class="{{ isRoute('receipt.management') ? 'active' : ''}} text-dark">
             <div class="text-center font-weight-bold py-3">Comprovante Gestão</div>
         </a>
+        <a href="{{ route('journal') }}" class="{{ isRoute('journal') ? 'active' : ''}} text-dark">
+            <div class="text-center font-weight-bold py-3">Jornal</div>
+        </a>
         <a href="{{ route('posts') }}" class="{{ isRoute('posts') ? 'active' : ''}} text-dark">
             <div class="text-center font-weight-bold py-3">Postagens</div>
         </a>
